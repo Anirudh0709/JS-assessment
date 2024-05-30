@@ -14,14 +14,14 @@ const token =[]
 // this function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata, 
 // and store it in the variable above.
-function mintNFT (_name,_eyecolor,_shirtcolor,_accessory) {
-    const NFT={
+function mintNFT (_name,_haircolor,_shirtcolor,_accessory) {
+    const fungible={
         "name":_name,
-        "eyecolor":_eyecolor,
+        "Haircolor":_haircolor,
         "shirtcolor":_shirtcolor,
         "accessory":_accessory
     }
-    token.push(NFT);
+    token.push(fungible);
     console.log("Minted:"+ _name);
 
 }
@@ -32,8 +32,8 @@ function listNFTs () {
 for(let i=0;i< token.length;i++){
 console.log("\nID:\t\t"+ (i+1));
 console.log("Name:\t\t"+token[i].name);
-console.log("Eyecolor:\t"+token[i].eyecolor);
-console.log("shirtcolor:"+token[i].shirtcolor);
+console.log("Haircolor:\t"+token[i].haircolor);
+console.log("Shirtcolor:"+token[i].shirtcolor);
 console.log ("Accessory:\t\t"+token[i].accessory);
 }
 
@@ -48,6 +48,7 @@ console.log("\n"+token.length);
 mintNFT("Alex","Red","White tshirt","Silver ring");
 mintNFT("Sara","Blue","White tshirt","Gold ring");
 mintNFT("Aditya","Green","White tshirt","Diamond ring");
-mintNFT("Mehak","Brown","White tshirt","Gold necklace ");
-listNFTs ();
+mintNFT("Mehak","Black","White tshirt","Gold necklace ");
+listNFTs();
 getTotalSupply();
+
